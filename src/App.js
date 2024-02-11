@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import { Box } from "@mui/material";
+import { useState } from "react";
+import { BackgroundImage } from "./components/BackgroundImage";
+import { Footer } from "./components/Footer";
+import { MoviesList } from "./components/MoviesList";
 
 function App() {
+  const [searchQuery, setSearchQuery] = useState('')
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <BackgroundImage setSearchQuery={setSearchQuery}/>
+      <Box 
+        sx = {{
+          margin: '20px',
+          padding: '20px',
+        }}
+      >
+      <MoviesList searchQuery={searchQuery}/>
+      </Box>
+      <Footer />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

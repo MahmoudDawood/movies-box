@@ -1,4 +1,9 @@
-# Getting Started with Create React App
+# MoviesBox
+A movies app landing page where users can simply search for their favorite movie.
+
+## Technologies
+- React, ReactQuery
+- MUI
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
